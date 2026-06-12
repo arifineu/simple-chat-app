@@ -1,42 +1,45 @@
-# Simple Chat App
+# SimpleChatApp
 
-This template should help get you started developing with Vue 3 in Vite.
+A chat app built to try out Vue 3 with the Composition API. It has a login screen, a contact list, and a 1-on-1 chat view with message bubbles. Nothing fancy – just a clean way to demonstrate what I can do with Vue 3, Pinia, Vue Router, Vitest, and Tailwind CSS.
 
-## Recommended IDE Setup
+## What it does
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Login** — Type any email and password to sign in. The app generates a display name from the email (e.g. `chris_evans@example.com` becomes "Chris Evans"). Session persists in localStorage.
+- **Chat list** — Sidebar with 20 dummy contacts. Each shows a profile photo, name, last message, and timestamp.
+- **Search** — Filter contacts by name or search through message content. Results are split into a contacts section and a messages section, with matching text highlighted.
+- **Chat view** — Click a contact to open the conversation. Messages show sender name, time, and content. Press Enter to send, Shift+Enter for a new line.
+- **User menu** — Click your avatar in the top-right corner to see your profile info and sign out.
+- **Responsive** — On mobile, the chat list and detail view take turns filling the screen. A back button appears in the detail view.
 
-## Recommended Browser Setup
+## Tech stack
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+| Layer | Tool |
+| --- | --- |
+| Framework | Vue 3 (Composition API, `<script setup>`) |
+| State management | Pinia |
+| Routing | Vue Router |
+| Styling | Tailwind CSS v4 |
+| Build | Vite |
+| Type checking | TypeScript + vue-tsc |
+| Testing | Vitest + @vue/test-utils |
+| Utilities | @vueuse/core |
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+## Getting started
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+The app runs at `http://localhost:5173`.
 
-```sh
-npm run build
-```
+## Scripts
+
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start dev server with hot reload |
+| `npm run build` | Type-check and build for production |
+| `npm run preview` | Preview the production build |
+| `npm test` | Run tests in watch mode |
+| `npm run test:run` | Run tests once |
+| `npm run type-check` | Run TypeScript type checking |
