@@ -1,6 +1,6 @@
 # SimpleChatApp
 
-A chat app built to try out Vue 3 with the Composition API. It has a login screen, a contact list, and a 1-on-1 chat view with message bubbles. Nothing fancy – just a clean way to demonstrate what I can do with Vue 3, Pinia, Vue Router, Vitest, and Tailwind CSS.
+A chat app built to try out Vue 3 with the Composition API. It has a login screen, a contact list, and a 1-on-1 chat view with message bubbles. Nothing fancy – just a clean way to demonstrate what I can do with Vue 3, Vue Router, Pinia, Vitest, and Tailwind CSS.
 
 ## What it does
 
